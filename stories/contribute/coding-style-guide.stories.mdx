@@ -1,0 +1,99 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta />
+
+# Coding Style Guide
+
+See [Angular coding style guide](https://angular.io/guide/styleguide#angular-coding-style-guide)
+
+## Naming convention
+
+### [Components](https://angular.io/guide/styleguide#components)
+
+**Selector:** `bd-`  
+Example: `bd-form`, `bd-checkbox`
+
+We allow custom suffix on components:
+
+| Component name      | Filename                 |
+| ------------------- | ------------------------ |
+| ExampleComponent    | example.component.ts     |
+| ExampleCellRenderer | example.cell-renderer.ts |
+
+**Filenames:** `form.component.html`, `form.component.scss`, `form.component.ts`
+
+#### Tip
+
+[Delegate complex component logic to services](https://angular.io/guide/styleguide#delegate-complex-component-logic-to-services)
+
+#### Template
+
+Extract template into a separate file `form.component.html`, unless it's really small.  
+For more info see [Angular styleguide](https://angular.io/guide/styleguide#extract-templates-and-styles-to-their-own-files)
+
+#### Styles
+
+Extract styles into a separate file `form.component.scss`, unless it's really small.  
+For more info see [Angular styleguide](https://angular.io/guide/styleguide#extract-templates-and-styles-to-their-own-files)
+
+Writing CSS should follow [BEM](http://getbem.com/naming/) styleguide
+
+### [Directives](https://angular.io/guide/styleguide#directives)
+
+**Prefix:** `bd`  
+Example: `[bdHighlight]`
+
+| Selectors                                   | Selector type         |
+| ------------------------------------------- | --------------------- |
+| ag-grid-angular                             | Element               |
+| [bdHighlight]                               | Attribute             |
+| .foo                                        | CSS class             |
+| input[type="checkbox"] / input[bdHighlight] | Element and attribute |
+
+**Filename:** `highlight.directive.ts`
+
+### [Modules](https://angular.io/guide/styleguide#angular-ngmodule-names)
+
+**Prefix:** `Bd`  
+Example: `BdExampleModule`
+
+**Suffix:** `Module`  
+Example: `BdExampleModule`
+
+**Filename:** `example.module.ts`
+
+### [Pipes](https://angular.io/guide/styleguide#pipe-names)
+
+**Pipe name:**: `example`
+
+**Suffix:** `Pipe`  
+Example: `ExamplePipe`
+
+**Filename:** `example.pipe.ts`
+
+### [Services](https://angular.io/guide/styleguide#services)
+
+**Suffix:** `Service`  
+Example: `DataService`, `TranslationService`
+
+**Filename:** `data.serivce.ts`, `translation.serivce.ts`
+
+## Storybook
+
+### Docs
+
+Storybook generates docs based on comments like below.
+
+```ts
+/** A name a user use to identify themselves */
+@Input username: string;
+```
+
+#### Naming
+
+Path and file name will determine the `story` section and title in the Storybook menu.
+
+| Path/filename                                |
+| -------------------------------------------- |
+| stories/contribute/pull-requests.stories.mdx |
+| stories/form/form-element.stories.mdx        |
