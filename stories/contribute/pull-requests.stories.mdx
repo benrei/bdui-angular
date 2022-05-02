@@ -1,0 +1,42 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta />
+
+# Pull requests
+
+## Creating Pull Requests
+
+Commits are very much at the code-level, and should be about the code changes. A pull request, on the other hand, though it's code-focused, requires a higher-level, architectural understanding of the change. A high-level summary and understanding of the problem is very useful for people looking back through a repo’s history in addition to reading the details of the individual code changes.
+
+- Try keep PRs small (speeds up review, motivates and helps reviewer see what's changed)
+- No more than 1 Jira issue pr pull request
+- A PR can contain more than 1 commit
+- Make sure to update version number in `package.json` if needed.
+- Write useful titles and descriptions
+- Add image(s) to show UI changes
+
+## Reviewing Pull Requests
+
+- Provide constructive feedback
+  - Think of the person while writing comments.
+    - Example comment:  
+      `I suggest we use flex instead, so we can have a shorter and more consise way to arrange our list`  
+       is better than ->  
+       `This is just wrong. Why don't you use flex instead?!`  
+       ;)
+  - Possitive feedback is welcome as well
+- Be precise about what you think needs to be improved
+- Be strict about temporary code
+  - Add comment with link to Jira task explaining the temporary code, so it will not be forgotten
+- Try review pull request and answere comments as fast as possible
+
+**Tip** for reviewer, ask yourself these questions:
+
+- Will this change benefit the project in terms of maintenance?
+- Will we have to change it because it’s just not scalable?
+- Will we be able to read this code six months from now?
+
+## Merging Pull Requests
+
+- Minor and patch (1.x.x) releases requires 1 approval (other than yourself).
+- Major (x.0.0) releases requires 2 or more approvals.

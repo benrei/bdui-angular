@@ -1,0 +1,73 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta />
+
+# Git
+
+## Branches
+
+### Types
+
+Name branches based on these types. This will help others get an idea of what the branch is about and could be used for automation
+
+| Type    | Example                            | Description     |
+| ------- | ---------------------------------- | --------------- |
+| bugfix  | bugfix/#xxx_Some_text_to_describe  | Bug fixes       |
+| feature | feature/#xxx_Some_text_to_describe | Feature related |
+| hotfix  | hotfix/#xxx_Some_text_to_describe  | Hotfixes        |
+| patch   | patch/#xxx_Some_text_to_describe   | Patches         |
+| release | release/#xxx_Some_text_to_describe | Releases        |
+|         |                                    |                 |
+
+## Commit messages
+
+### Defining a commit message
+
+```
+type: <subject>
+<body>
+```
+
+**Tip:** A properly formed git commit subject line should always be able to complete the following sentence:
+
+If applied, this commit will... `<your subject line here>`
+
+**Example:** `DWC-1234 Add dropdown editor and stories`
+
+### 1. Type of commit
+
+| Type     | Example             | Description                                    |
+| -------- | ------------------- | ---------------------------------------------- |
+| #xxx     | #xxx: "message"     | Github task (feature, bug, etc)                |
+| chore    | chore: "message"    | Simple code maintenance                        |
+| docs     | docs: "message"     | Everything related to documentation            |
+| refactor | refactor: "message" | Refactoring a specific section of the codebase |
+
+### 2. Subject
+
+Short description of the applied changes.
+
+- Short (72 chars or less)
+- Do not end the subject line with a period
+- Use the imperative mood in the subject line
+  - Use "add user view" instaed of "added user view" or "adds user view"
+
+```text
+#xxx: add customer page
+chore: remove unused user delete button
+docs: update checkbox docs
+```
+
+### 3. Body (Optional)
+
+Use the body to explain what changes you have made and why you made them.
+
+- Separate the subject from the body with a blank line
+- Limit each line to 72 characters
+- Do not assume the reviewer understands what the original problem was, ensure you add it
+- Do not think your code is self-explanatory
+
+```
+refactor: drop support for Node 6
+BREAKING CHANGE: refactor to use JavaScript features not available in Node 6.
+```
