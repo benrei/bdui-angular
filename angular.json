@@ -1,0 +1,91 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "@bdui/ngx-core": {
+      "projectType": "library",
+      "root": "projects/bdui/ngx-core",
+      "sourceRoot": "projects/bdui/ngx-core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bdui/ngx-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bdui/ngx-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bdui/ngx-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bdui/ngx-core/src/test.ts",
+            "tsConfig": "projects/bdui/ngx-core/tsconfig.spec.json",
+            "karmaConfig": "projects/bdui/ngx-core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/bdui/ngx-core/**/*.ts",
+              "projects/bdui/ngx-core/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "@bdui/ngx-ag-grid": {
+      "projectType": "library",
+      "root": "projects/bdui/ngx-ag-grid",
+      "sourceRoot": "projects/bdui/ngx-ag-grid/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bdui/ngx-ag-grid/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bdui/ngx-ag-grid/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bdui/ngx-ag-grid/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bdui/ngx-ag-grid/src/test.ts",
+            "tsConfig": "projects/bdui/ngx-ag-grid/tsconfig.spec.json",
+            "karmaConfig": "projects/bdui/ngx-ag-grid/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/bdui/ngx-ag-grid/**/*.ts",
+              "projects/bdui/ngx-ag-grid/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@bdui/ngx-core"
+}

@@ -1,0 +1,68 @@
+import { Meta } from "@storybook/addon-docs";
+import agGrid from "/projects/bdui/ngx-ag-grid/package.json";
+import core from "/projects/bdui/ngx-core/package.json";
+
+<Meta />
+
+# @bdui angular libraries
+
+## @bdui/ngx-core
+
+<h4>Version: {core.version}</h4>
+
+A library splitted into categories having common components, directives, utils, styles etc.
+
+### Categories
+
+- [Core](/story/core-overview--page)
+- [Form](/story/form-overview--page)
+- [Editors](/story/editors-overview--page)
+- [Styles](/story/styles-overview--page)
+
+### Getting started
+
+Below we walk through the necessary steps to add `@bdui/ngx-core` to an Angular project.
+
+### Install @bdui/ngx-core
+
+Open terminal and run:
+
+```sh
+npm i @bdui/ngx-core
+```
+
+#### Import styles
+
+Add these lines to `src/styles.scss`:
+
+```css
+@import "./@bdui/ngx-core/src/lib/styles/core.css";
+@import "./@bdui/ngx-core/src/lib/styles/scroll-bar.css";
+```
+
+#### External resources
+
+This library is using [Material Icons](https://fonts.google.com/icons?selected=Material+Icons), so we need to import either
+
+in html: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />`  
+or in css: `@import "https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined";`
+
+---
+
+## @bdui/ngx-ag-grid
+
+<h4>Version: {agGrid.version}</h4>
+
+### Install @bdui/ngx-core
+
+Open terminal and run:
+
+```sh
+npm i @bdui/ngx-ag-grid
+```
+
+The next step is to add the `@bdui/ngx-ag-grid` styles. Add these lines to `src/styles.scss`:
+
+```css
+@import "./@bdui/ngx-ag-grid/src/lib/themes/default.css";
+```
