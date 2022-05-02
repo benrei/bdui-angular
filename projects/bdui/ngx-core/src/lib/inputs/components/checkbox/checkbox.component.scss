@@ -1,0 +1,16 @@
+:host {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: fit-content;
+}
+input[type="checkbox"] {
+  accent-color: var(--secondary500-color);
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+}
+label {
+  font-size: 14px;
+  margin-left: 4px;
+}

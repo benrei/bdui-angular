@@ -1,0 +1,21 @@
+input,
+textarea {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  &:checked {
+    border-color: var(--secondary500-color) !important;
+  }
+  &:disabled {
+    background-color: var(--disabled-background-color);
+  }
+  &:focus-visible {
+    outline: none;
+    border-color: var(--secondary500-color) !important;
+  }
+  &:hover {
+    border-color: var(--border-hover-color);
+  }
+}
+.validation-error {
+  border-color: var(--error-color);
+}
