@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "assets": ["./src/lib/styles/*"],
+  "dest": "../../../dist/bdui/ngx-core",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}

@@ -1,0 +1,75 @@
+@import "./color.palettes.css";
+
+:root {
+  /** Colors */
+  --input-backgroud-color: white;
+
+  /** Used on texts etc */
+  --text-color: rgb(0, 0, 0, 0.87);
+  --text-color-1: rgb(0, 0, 0, 0.67);
+  --text-color-2: rgb(0, 0, 0, 0.38);
+}
+
+:root,
+[data-theme="default"] {
+  --primary10-color: var(--greyBlue10);
+  --primary20-color: var(--greyBlue20);
+  --primary30-color: var(--greyBlue30);
+  --primary40-color: var(--greyBlue40);
+  --primary50-color: var(--greyBlue50);
+  --primary60-color: var(--greyBlue60);
+  --primary70-color: var(--greyBlue70);
+  --primary80-color: var(--greyBlue80);
+  --primary90-color: var(--greyBlue90);
+  --primary100-color: var(--greyBlue100);
+
+  --secondary10-color: var(--brown10);
+  --secondary20-color: var(--brown20);
+  --secondary30-color: var(--brown30);
+  --secondary40-color: var(--brown40);
+  --secondary50-color: var(--brown50);
+  --secondary60-color: var(--brown60);
+  --secondary70-color: var(--brown70);
+  --secondary80-color: var(--brown80);
+  --secondary90-color: var(--brown90);
+  --secondary100-color: var(--brown100);
+
+  --border-color: var(--grey200);
+  --border-hover-color: var(--grey500);
+  --disabled-color: var(--grey300);
+  --disabled-background-color: var(--grey100);
+}
+
+/* Dummy example of dark theme */
+[data-theme="dark"] {
+  --primary10-color: var(--greyBlue10);
+  --primary20-color: var(--greyBlue20);
+  --primary30-color: var(--greyBlue30);
+  --primary40-color: var(--greyBlue40);
+  --primary50-color: var(--greyBlue50);
+  --primary60-color: var(--greyBlue60);
+  --primary70-color: var(--greyBlue70);
+  --primary80-color: var(--greyBlue80);
+  --primary90-color: var(--greyBlue90);
+  --primary100-color: var(--greyBlue100);
+
+  --secondary10-color: var(--brown10);
+  --secondary20-color: var(--brown20);
+  --secondary30-color: var(--brown30);
+  --secondary40-color: var(--brown40);
+  --secondary50-color: var(--brown50);
+  --secondary60-color: var(--brown60);
+  --secondary70-color: var(--brown70);
+  --secondary80-color: var(--brown80);
+  --secondary90-color: var(--brown90);
+  --secondary100-color: var(--brown100);
+
+  --input-backgroud-color: grey;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --text-color-1: rgba(255, 255, 255, 0.67);
+  --text-color-2: rgba(255, 255, 255, 0.38);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
